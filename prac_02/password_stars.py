@@ -2,12 +2,12 @@
 
 MINIMUM_LENGTH = 7
 def main():
-    """Gets user password and censors it"""
+    """Get user password and censor it"""
     password = get_password()
     display_blurred_password(password)
 
 def get_password():
-    """Asks user for password until its length is valid"""
+    """Ask user for password until its length is valid"""
     password = input("Enter password: ")
     while len(password) < MINIMUM_LENGTH:
         print(f'Password must be at least {MINIMUM_LENGTH} characters long')
@@ -15,7 +15,7 @@ def get_password():
     return password
 
 def display_blurred_password(password):
-    """Prints blurred password"""
+    """Print blurred password with asterisks"""
     print(len(password) * '*')
 
 
