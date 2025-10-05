@@ -1,3 +1,8 @@
+"""
+CP1404 - Practical
+Files program
+"""
+
 # 1.
 name = input("Enter your name: ")
 out_file = open("name.txt", "w")

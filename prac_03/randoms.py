@@ -1,3 +1,8 @@
+"""
+CP1404 - Practical
+Randoms program
+"""
+
 from random import randint
 
 # 10, 15, 15, 19
