@@ -17,6 +17,7 @@ def main():
 
 
 def print_report(incomes):
+    """Prints current and current total income for each month."""
     print("\nIncome Report\n-------------")
     total = 0
     for month, income in enumerate(incomes, 1):
