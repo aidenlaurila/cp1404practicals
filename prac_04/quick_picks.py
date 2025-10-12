@@ -1,3 +1,8 @@
+"""
+CP1404 Practical
+Quick pick generator program
+"""
+
 import random
 
 MINIMUM = 1

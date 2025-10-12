@@ -1,3 +1,7 @@
+"""
+CP1404 Practical
+"""
+
 # Basic list operations
 AMOUNT_OF_NUMBERS = 5
 
