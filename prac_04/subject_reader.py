@@ -8,12 +8,12 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = load_data(FILENAME)
-    print(data)
+    print_subject_details(data)
 
 
 def load_data(filename=FILENAME):
     """Read data from file formatted like: subject,lecturer,number of students."""
-    sorted_data = []
+    data = []
     input_file = open(filename)
     for line in input_file:
         print(line)  # See what a line looks like
@@ -24,9 +24,14 @@ def load_data(filename=FILENAME):
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
-        sorted_data.append(parts)
+        data.append(parts)
     input_file.close()
-    return sorted_data
+    return data
 
+def print_subject_details(data):
+    """Print subject details."""
+    max_name_length = max(len(subject[1]) for subject in data)
+    for subject in data:
+        print(f"{subject[0]} is taught by {subject[1]:{max_name_length}} and has {subject[2]:3} students")
 
 main()
