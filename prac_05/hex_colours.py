@@ -1,3 +1,8 @@
+"""
+CP1404 Practical
+Program to show user hex codes of colours
+"""
+
 COLOUR_TO_CODE = {"amethyst": "#9966cc", "blackcoffee": "#3b2f2f", "blueviolet": "#8a2be2",
                 "brickred": "#cb4154", "canary": "#ffff99", "cardinal": "#c41e3a",
                 "celeste": "#b2ffff", "charcoal": "#36454f", "cobalt": "#0047ab",
