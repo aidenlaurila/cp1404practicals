@@ -1,7 +1,7 @@
 """
 Emails
 Estimate: 25 minutes
-Actual:
+Actual: 32 minutes (I took a break)
 """
 FILENAME = "wimbledon.csv"
 COUNTRY_INDEX = 1
@@ -10,8 +10,7 @@ CHAMPION_INDEX = 2
 def main():
     records = load_records(FILENAME)
     champions_to_wins, winning_countries = process_records(records)
-    print(champions_to_wins)
-    print(winning_countries)
+    print_results(champions_to_wins, winning_countries)
 
 def load_records(filename):
     records = []
@@ -37,5 +36,13 @@ def process_records(records):
             champion_to_wins[record[CHAMPION_INDEX]] = 1
 
     return champion_to_wins, winning_countries
+
+def print_results(champion_to_wins, winning_countries):
+    print("Wimbledon Champions:")
+    for champion, wins in champion_to_wins.items():
+        print(champion, wins)
+
+    print(f"\nThese {len(winning_countries)} countries have won Wimbledon:")
+    print(", ".join(sorted(winning_countries)))
 
 main()
