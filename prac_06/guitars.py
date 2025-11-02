@@ -1,3 +1,8 @@
+"""
+Estimated Time: 20 Minutes
+Actual Time: 37 minutes
+"""
+
 from prac_06.guitar import Guitar
 
 print("My guitars!")

@@ -1,3 +1,8 @@
+"""
+Estimated Time: 10 Minutes
+Actual Time: 4 minutes
+"""
+
 from guitar import Guitar
 
 electric_guitar = Guitar("Electric Guitar", 2002, 2000)
