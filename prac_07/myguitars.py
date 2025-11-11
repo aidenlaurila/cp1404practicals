@@ -2,14 +2,14 @@ from guitar import Guitar
 
 FILENAME = "guitars.csv"
 def main():
-    """..."""
-    guitars = convert_file_to_guitars(FILENAME)
-    guitars.sort()
+    """Program to enable user to add guitars to a file of guitars."""
+    guitars = load_guitars_from_file(FILENAME)
     add_guitar(guitars)
-    [print(guitar) for guitar in guitars] # Debugging
+    guitars.sort()
+    save_guitars_to_file(FILENAME, guitars)
 
-def convert_file_to_guitars(filename):
-    """..."""
+def load_guitars_from_file(filename):
+    """Loads all guitars from a file into guitars list."""
     guitars = []
     in_file = open(FILENAME, 'r')
     for line in in_file:
@@ -23,7 +23,7 @@ def convert_file_to_guitars(filename):
     return guitars
 
 def add_guitar(guitars):
-    """Adds guitar to list of guitars until user input is empty."""
+    """Appends guitar to list of guitars until entered input is empty."""
     name = input("Name: ")
     while name != "":
         year = int(input("Year: "))
@@ -31,6 +31,12 @@ def add_guitar(guitars):
         print("")
         guitars.append(Guitar(name, year, cost))
         name = input("Name: ")
+
+def save_guitars_to_file(filename, guitars):
+    """Write all guitars in list to file."""
+    with open(filename, 'w') as out_file:
+        for guitar in guitars:
+            out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
 
 
 main()
