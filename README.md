@@ -1,3 +1,9 @@
 # CP1404 Practicals
 
-Practical work for IT@JCU CP1404
+## About Me and this Repository
+
+## Lessons Learnt About Clean Code
+
+## Helpful Links
+- [Programming Patterns] (https://github.com/CP1404/Starter/wiki/Programming-Patterns)
+- [Practical Instructions] (https://github.com/CP1404/Practicals)
